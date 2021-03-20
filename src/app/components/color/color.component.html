@@ -1,1 +1,13 @@
-<p>color works!</p>
+<h1 *ngIf="dataLoaded != false">Colors</h1>
+<table *ngIf="dataLoaded != false" class="table">
+  <thead>
+    <tr>
+      <th>Color Id</th>
+      <th>Color Name</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let color of colors">
+    <td>{{ color.colorId }}</td>
+    <td>{{ color.colorName }}</td>
+  </tr>
+</table>

@@ -1,1 +1,13 @@
-<p>brand works!</p>
+<h1 *ngIf="dataLoaded != false">Brands</h1>
+<table *ngIf="dataLoaded == true" class="table">
+  <thead>
+    <tr>
+      <th>Brand Id</th>
+      <th>Brand Name</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let brand of brands">
+    <td>{{ brand.brandId }}</td>
+    <td>{{ brand.brandName }}</td>
+  </tr>
+</table>

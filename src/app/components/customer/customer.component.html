@@ -1,13 +1,16 @@
-<ul class="list-group">
-    Burasi Customer list
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul>
+<h1 *ngIf="dataLoaded != false">Customers</h1>
+<table *ngIf="dataLoaded != false" class="table">
+  <thead>
+    <tr>
+      <th>Customer Id</th>
+      <th>User Id</th>
+      <th>Company Name</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let customer of customers">
+    <td>{{ customer.id }}</td>
+    <td>{{ customer.userId }}</td>
+    <td>{{ customer.companyName }}</td>
+
+  </tr>
+</table>
