@@ -9,7 +9,7 @@ import { ColorService } from 'src/app/services/color.service';
 })
 export class ColorComponent implements OnInit {
   colors: Color[] = [];
-  dataLoaded = false;
+  //dataLoaded = false;
   constructor(private colorService: ColorService) {}
 
   ngOnInit(): void {
@@ -18,7 +18,6 @@ export class ColorComponent implements OnInit {
   getColors() {
     this.colorService.getColors().subscribe((respone) => {
       this.colors = respone.data;
-      this.dataLoaded = true;
     });
   }
 }

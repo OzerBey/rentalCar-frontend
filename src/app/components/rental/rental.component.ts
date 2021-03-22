@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RentalDetail } from 'src/app/models/rentalDetail';
-import { RentalDetailResponseModel } from 'src/app/models/rentalDetailResponseModel';
 import { RentalService } from 'src/app/services/rental.service';
 
 @Component({
