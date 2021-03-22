@@ -14,7 +14,12 @@
 
 <ul>
   <h3 class="bold">Colors</h3>
-  <li *ngFor="let color of colors" class="list-group-item">
+  <li
+    (click)="setCurrentColor(color)"
+    *ngFor="let color of colors"
+    [class]="getCurrentColorClass(color)"
+  >
     {{ color.colorName }}
   </li>
 </ul>
+<h5 *ngIf="currentColor">{{ currentColor.colorName }}</h5>

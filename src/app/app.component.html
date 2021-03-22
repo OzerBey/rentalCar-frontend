@@ -16,23 +16,23 @@
   <router-outlet></router-outlet>
 </div> -->
 
-
-<div class = "container">
+<div class="container">
   <app-navi></app-navi>
-  <div class = "row">
-      <div class = "col-md-3">
-          <app-brand></app-brand>
-          <br>
-          <app-color></app-color>
-      </div>
-      <div class="col-md-6">
-          <app-car></app-car>
-      </div>
-      <div class = "col-md-3">
-          <app-customer></app-customer>
-          <app-rental></app-rental>
-      </div>
-      
+  <div class="row">
+    <div class="col-md-3">
+      <!--sabit görünmesi gerekenler burada yer alır-->
+      <app-brand></app-brand>
+      <br />
+      <app-color></app-color>
+    </div>
+    <!-- <div class="col-md-6">
+      <app-car></app-car>
+    </div> -->
+    <div class="col-md-9">
+      <!-- <app-customer></app-customer>
+      <app-rental></app-rental> -->
+      <router-outlet></router-outlet>
+      <!--sürekli değişken veri akışınını olacagı yerler buraya yazılır -->
+    </div>
   </div>
 </div>
-<router-outlet></router-outlet>
