@@ -13,9 +13,10 @@
 </table> -->
 <ul>
   <h3 class="bold">Brands</h3>
+  <li [class]="getAllBrandClass()"  class="list-group-item list-group-item-danger" routerLink="/cars">All Cars</li>
   <li
     (click)="setCurrentBrand(brand)"
-    [routerLink]="['/cars/brand',brand.brandId]"
+    routerLink="/cars/brand/{{brand.brandId}}"
     *ngFor="let brand of brands"
     [class]="getCurrentBrandClass(brand)"
   >

@@ -33,4 +33,12 @@ export class ColorComponent implements OnInit {
       return 'list-group-item';
     }
   }
+
+  getAllColorClass() {
+    if (!this.currentColor) {
+      return 'list-group-item list-group-item-success';
+    } else {
+      return 'list-group-item ';
+    }
+  }
 }

@@ -16,7 +16,9 @@
   <h3 class="bold">Colors</h3>
   <li
     (click)="setCurrentColor(color)"
+    routerLink="/cars/color/{{color.colorId}}"
     *ngFor="let color of colors"
+    class="getAllColorClass()"
     [class]="getCurrentColorClass(color)"
   >
     {{ color.colorName }}
